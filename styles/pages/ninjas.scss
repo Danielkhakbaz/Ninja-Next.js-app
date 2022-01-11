@@ -1,0 +1,11 @@
+.ninjas__name {
+  background-color: white;
+  transition: 0.1s;
+  border-left: 8px solid white;
+  padding: 30px;
+  cursor: pointer;
+  &:hover {
+    transition: 0.1s;
+    border-left: 8px solid royalblue;
+  }
+}

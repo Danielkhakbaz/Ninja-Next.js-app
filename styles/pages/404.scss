@@ -1,0 +1,16 @@
+.notFound__texts {
+  text-align: center;
+}
+.notFound__button {
+  background-color: royalblue;
+  color: white;
+  transition: 0.2s;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px 20px;
+  &:hover {
+    background-color: rgb(42, 82, 202);
+    transition: 0.2s;
+  }
+}
