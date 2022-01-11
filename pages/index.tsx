@@ -23,6 +23,7 @@ const Home: React.FC = () => {
           This is the Home Page. This is the Home Page. This is the Home Page.
           This is the Home Page. This is the Home Page.
         </p>
+        <p>Made by the one and only Danial Khakbaz</p>
       </>
     </>
   );
