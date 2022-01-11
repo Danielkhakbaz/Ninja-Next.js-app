@@ -6,6 +6,7 @@ const MyDocument: React.FC = () => {
       <Head>
         <link rel="icon" href="/TopLogo.jpg" />
       </Head>
+
       <body>
         <Main />
         <NextScript />

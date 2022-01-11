@@ -2,13 +2,12 @@ import Head from "next/head";
 import EndPoint from "../../services/api/api.json";
 
 export const getStaticPaths = async () => {
-  const result = await fetch(`${EndPoint.apiURL}/users`);
-  const data = await result.json();
+  const res = await fetch(`${EndPoint.apiURL}/users`);
+  const data = await res.json();
+
   const paths = data.map((ninja: { id: number }) => {
     return {
-      params: {
-        id: ninja.id.toString(),
-      },
+      params: { id: ninja.id.toString() },
     };
   });
 
@@ -20,18 +19,15 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context: { params: { id: number } }) => {
   const id = context.params.id;
-
-  const result = await fetch(`${EndPoint.apiURL}/users/${id}`);
-  const data = await result.json();
+  const res = await fetch(`${EndPoint.apiURL}/users/${id}`);
+  const data = await res.json();
 
   return {
-    props: {
-      ninja: data,
-    },
+    props: { ninja: data },
   };
 };
 
-export interface DetailsProps {
+export interface NinjaType {
   ninja: {
     name: string;
     email: string;
@@ -39,7 +35,7 @@ export interface DetailsProps {
   };
 }
 
-const Details: React.FC<DetailsProps> = ({ ninja }) => {
+const Details: React.FC<NinjaType> = ({ ninja }) => {
   return (
     <>
       <Head>

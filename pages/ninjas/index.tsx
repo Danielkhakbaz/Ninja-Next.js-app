@@ -33,11 +33,13 @@ const Ninjas: React.FC<NinjasProps> = ({ ninjas }) => {
       </Head>
       <>
         <h2>Ninjas</h2>
-        {ninjas.map((ninja) => (
-          <Link href={`/ninjas/${ninja.id}`} key={ninja.id} passHref>
-            <h3 className="ninjas__name">{ninja.name}</h3>
-          </Link>
-        ))}
+        <div>
+          {ninjas.map((ninja) => (
+            <Link href={`/ninjas/${ninja.id}`} key={ninja.id} passHref>
+              <h3 className="ninjas__name">{ninja.name}</h3>
+            </Link>
+          ))}
+        </div>
       </>
     </>
   );

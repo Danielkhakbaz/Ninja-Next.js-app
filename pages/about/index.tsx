@@ -6,6 +6,7 @@ const About: React.FC = () => {
       <Head>
         <title>About | Ninja App</title>
       </Head>
+
       <>
         <h2>About</h2>
         <p>

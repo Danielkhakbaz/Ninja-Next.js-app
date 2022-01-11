@@ -4,8 +4,8 @@ import Head from "next/head";
 import Link from "next/link";
 
 const NotFound: React.FC = () => {
-  const router = useRouter();
   const [seconds, setSeconds] = useState<number>(3);
+  const router = useRouter();
 
   useEffect(() => {
     if (seconds != 0) {
@@ -22,6 +22,7 @@ const NotFound: React.FC = () => {
       <Head>
         <title>404 | Ninja App</title>
       </Head>
+
       <>
         <div className="notFound__texts">
           <h1>{seconds}</h1>
